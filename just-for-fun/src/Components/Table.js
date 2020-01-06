@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Tr from './Tr'
 class Table extends React.Component{
     // fill in rows while there is data
     // expect user to pass in data 
@@ -7,7 +7,7 @@ class Table extends React.Component{
     render() {
         return (
             <table>
-                <tr>Hey</tr>
+                <Tr/>
              </table> 
         );
         
