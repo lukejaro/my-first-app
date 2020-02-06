@@ -5,9 +5,8 @@ import KBMax from './Components/KBMax'
 function App() {
   return (
     <div className="App">
-        <header className="App-header">Data Uploader </header>
-        <KBMax/>
-        <Table/>
+        <header className="App-header">Hello Ben likes beans </header>
+        <header>Hello Mr. Anderson</header>
 
     </div>
     
