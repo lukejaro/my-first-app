@@ -33,7 +33,7 @@ var countDownDate = new Date("Febuary 15, 2020 18:00:00").getTime();
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("timeUntil").innerText = "Time Until You Can Read My Valentines Note \nl\nl" + days + "d " + hours + "h "
+  document.getElementById("timeUntil").innerText = "Time Until You Can Read My Valentines Note \n\n" + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s "  ;
 
   // If the count down is finished, write some text
