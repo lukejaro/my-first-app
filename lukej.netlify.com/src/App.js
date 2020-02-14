@@ -1,26 +1,65 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+ 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function  App()  {
+    
+    return (
+      <div className="App">
+        <header className = "App-header" id= "timeUntil"></header>
+        <p className = "note" id = "note">  </p>
+        <p className= "note" id = "game"></p>
+      </div>
+    );
+ 
 }
+// Set the date we're counting down to
+var countDownDate = new Date("Febuary 12, 2020 20:00:00").getTime();
+
+// Update the count down every 1 second
+ var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("timeUntil").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s "  ;
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timeUntil").innerHTML = "Neydee, I Love you!";
+    document.getElementById("note").innerText= "Babe,\n \n  " + 
+            "Thank you for doing everything that you do for me. \n" + 
+            "There is not a day that we have been together where you were not there for me \n" + 
+            "I'm Luke Jaroszewski for crying out loud; one of the biggest babies out there, I can't keep track of time, I get lost on my way to my own house.\n\n " + 
+            "You, Neydee Torres are indeed the BADDEST, HANDS DOWN COOLEST, BEST FRIEND, LOVER, SOMETIMES HATER (only of mexicans), CAT LOVING, " +
+            "WHISKEY CHUGGING, BOYSCOUT IGNORING, MOUNTAIN SCALING, CHILD HELPING, MOMMY MILKIN, BOYFRIEND PLEASING, BEAUTIFUL GIRLFRINED of mine that I will love forever :) " +
+            "\n\nThank you for truely being my Valentine... all that to be said:  \n\n" + 
+            "and in the spirit of valentines day, when we get back, we are locking the doors and turning the lights down low. ;)" + 
+            "\n\nNow for the fun part... \n\n"; 
+      
+
+  }
+}, 1000);
+ 
+
+
+
+ 
 
 export default App;
+
+
+ 
