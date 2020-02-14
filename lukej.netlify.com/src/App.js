@@ -15,7 +15,7 @@ function  App()  {
  
 }
 // Set the date we're counting down to
-var countDownDate = new Date("Febuary 12, 2020 20:00:00").getTime();
+var countDownDate = new Date("Febuary 15, 2020 18:00:00").getTime();
 
 // Update the count down every 1 second
  var x = setInterval(function() {
@@ -33,7 +33,7 @@ var countDownDate = new Date("Febuary 12, 2020 20:00:00").getTime();
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("timeUntil").innerHTML =  days + "d " + hours + "h "
+  document.getElementById("timeUntil").innerText = "Time Until You Can Read My Valentines Note \nl\nl" + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s "  ;
 
   // If the count down is finished, write some text
@@ -49,8 +49,7 @@ var countDownDate = new Date("Febuary 12, 2020 20:00:00").getTime();
             "\n\nThank you for truely being my Valentine... all that to be said:  \n\n" + 
             "and in the spirit of valentines day, when we get back, we are locking the doors and turning the lights down low. ;)" + 
             "\n\nNow for the fun part... \n\n"; 
-      
-
+       
   }
 }, 1000);
  
